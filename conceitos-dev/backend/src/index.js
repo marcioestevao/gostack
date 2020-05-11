@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { uuid, isUuid } = require("uuidv4");
 
 // /**
@@ -34,6 +35,8 @@ const { uuid, isUuid } = require("uuidv4");
  */
 
 const app = express();
+
+app.use(cors());
 app.use(express.json()); //Para o express reconhecer o conteudo em formato json que vem através de Request Body
 
 const projects = [];
